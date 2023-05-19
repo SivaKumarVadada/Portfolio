@@ -107,7 +107,6 @@ body
     justify-content: space-evenly;
     align-items: center;
     cursor: default;
-    /* display: none; */
 }
 .aboutTextinfo
 {
@@ -863,6 +862,10 @@ body
     {
         height: 85vh;
     }
+    .main>h1
+    {
+        color: white;
+    }
     .main #menu
     {
         width: 10%;
@@ -935,12 +938,13 @@ body
     }
     .aboutProfiles h2
     {
-        font-size: 1em;
-        bottom: 5vh;
+        font-size: 0.5em;
+        bottom: 3vh;
+        transition: 1s;
     }
     .aboutProfiles h3
     {
-        font-size: 2em;
+        font-size: 0.3em;
         bottom: 0.5vh;
     }
     .aboutProfiles img
@@ -951,7 +955,22 @@ body
     .aboutProfiles:hover img
     {
         margin-top: -15vh;
+        border: 3px solid white;
+        border-width: 0px 0px 3px 0px;
     }
+    .aboutProfiles:hover h2
+    {
+        font-size: 2em;
+    }
+    .aboutProfiles:hover h3
+    {
+        font-size: 1.5em;
+    }
+    .aboutTextinfo::before
+    {
+        filter: blur(15px);
+    }
+    
     /* education Informatin */
     .educateContainer
     {
@@ -961,6 +980,8 @@ body
     .educateContainer h1
     {
         font-size: 2em;
+        margin-top: 3vh;
+        margin-left: 3.5vw;
     }
     .educatInfo
     {
@@ -970,16 +991,22 @@ body
     }
     .educatInfo div
     {
-        width: 50vw;
-        height: 50vw;
+        width: 80vw;
+        height: 30vw;
+        background:rgb(34, 34, 34);
+        border: 2px groove #fc0987;
+        border-width: 0px 0px 3px 0px;
+        border-radius: 1em;
     }
     .educatInfo div:hover
     {
         width: 80vw;
+        height: 50vw;
+        border-width: 0px 0px 0px 0px;
     }
     .educatInfo div::before
     {
-        filter: blur(25px);
+        filter: blur(15px);
     }
     .educatInfo div:hover section
     {
@@ -1122,6 +1149,7 @@ body
     }
     .experienceContainer #letters
     {
+        background: none;
         width: 90%;
         height: 50vh;
     }
@@ -1136,6 +1164,8 @@ body
     .experienceContainer #letters section
     {
         height: 50vh;
+        background: none;
+        box-shadow: none;
     }
     #letters section h1
     {
@@ -1170,7 +1200,7 @@ body
     }
     .projectContainer div::before
     {
-        filter: blur(20px);
+        filter: blur(15px);
     }
     .projectContainer div:hover::before
     {
@@ -1180,6 +1210,8 @@ body
     {
         width: 100%;
         height: 15vh;
+        border: 3px groove #fc0987;
+        border-width: 0px 0px 3px 0px;
     }
     .projectContainer div:hover span
     {
@@ -1187,12 +1219,12 @@ body
         height: 30%;
         margin-bottom: -11vh;
         border-radius: 0.5em;
+        border-color:white;
     }
     .projectContainer div img
     {
         width: 40%;
         margin-left: -2vw;
-        z-index: 6;
     }
     .projectContainer #calcu img
     {
@@ -1214,5 +1246,18 @@ body
         transform:translateY(-2vh);
         left: 15vw;
         bottom: -3vw;
+    }
+    .projectContainer div img
+    {
+        width: 25%;
+        margin-top: -3vh;
+    }
+    .projectContainer #calcu img
+    {
+        width: 20%;
+    }
+    .projectContainer #photo img
+    {
+        width: 30%;
     }
 }
